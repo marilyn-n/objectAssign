@@ -18,7 +18,7 @@ const obj = Object.assign({}, o1, o2, o3);
 console.log(obj);
 
 const status = {
-  public: 'Publico',
+  public: 'Público',
   private: 'Privado',
   deleted: 'Eliminado',
   draft: 'Borrador',
@@ -53,9 +53,34 @@ const objPrivate = Object.assign(
   }
 )
 
-console.log(objPrivate, '<<<<<---------')
+const dogObj = {
+  dogBarks() {
+    return 'wuau wuau'
+  }
+}
 
-const human = { 
+const catObj = {
+  catPurrs() {
+    return 'prr prr'
+  }
+}
+
+const animals = Object.assign(
+  {},
+  catObj,
+  dogObj,
+  {
+    animalEats(){
+      console.log('animal eats animal food')
+    },
+  }
+)
+
+console.log(animals, '<<<--------')
+
+// overwriting properties
+
+const human = {  
   canDie: true,
   isBorn: true,
   getsOld: true,
@@ -66,14 +91,16 @@ const human = {
   }
  }
  
- const superWoman = Object.assign( human, {
-   canDie: false,
-   getsOld: false,
-   canFly: true,
-   mustEat: false,
-   name: null,
-   saveWorld () {
-     console.log(`${name} saves the world`)
+ const superWoman = Object.assign(
+   human, 
+   {
+    canDie: false,
+    getsOld: false,
+    canFly: true,
+    mustEat: false,
+    name: null,
+    saveWorld () {
+      console.log(`${name} saves the world`)
    }
  })
 
@@ -84,6 +111,16 @@ const human = {
    isDeleted: false
  }
 
- const newPost = Object.assign({}, fbPost)
+ const newPost = Object.assign(
+   {},
+   fbPost,
+   {
+    status: `Nuevo post ${status.public}`,
+    likes: 0,
+    sad: 0,
+    angry: 0,
+    funny: 0
+   }
+  )
 
- Object.assign(newPost, { likes: 0 })
+  console.log(newPost, '************')
