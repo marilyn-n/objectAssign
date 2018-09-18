@@ -1,19 +1,17 @@
-// cloning an object
-
-const obj1 = {}
 
 const obj2 = {
   fb: 'mar',
   instagram: '@mar'
 }
-
-Object.assign(obj1, {twitter: 'mar'})
+// cloning an object
+const copy = Object.assign({}, {twitter: 'mar'})
+// adding properties to an existing object
 Object.assign(obj2, {patron: 'm@r'})
 
 const o1 = { a: 1, b: 1, c: 1 };
 const o2 = { b: 2, c: 2 };
 const o3 = { c: 3 };
-
+// merging object to create new object
 const obj = Object.assign({}, o1, o2, o3);
 console.log(obj);
 
@@ -45,7 +43,7 @@ const objCopy = Object.assign(
   }
 )
 
-const objPrivate = Object.assign(
+const objRestricted = Object.assign(
   {},
   myPersonalInfo,
   {
