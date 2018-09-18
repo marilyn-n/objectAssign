@@ -42,7 +42,6 @@ const journeys = [
  const distanceArrInMiles = journeys.map(distanceInMiles)
  console.log(distanceArrInMiles, '<<<--------')
 
-
 //  distances greater than 10000 km
 
 const journeysGreaterThan10000 = journeys.filter(item => item.distance > 10000)
@@ -64,3 +63,22 @@ console.log('are there any journeys to Los Angeles?')
 
 const areThereJourneysToLA = journeys.some(item => item.to === 'Los Angeles')
 console.log(areThereJourneysToLA)
+
+// ------------------ Find all multiples of 3 and 5 less than 1000
+const multiples = () => {
+  const results = []
+  for (let i = 1; i < 1000; i++) {
+    if (i % 3 === 0) {results.push(i)}
+    else if (i % 5 === 0) {results.push(i)}
+  }
+return results
+}
+
+const multiplesOf3And5 = multiples()
+
+// ------------------- Sum those multiples
+const sumOfMultiples = (accumulator, current) => accumulator + current
+
+const total = multiplesOf3And5.reduce(sumOfMultiples)
+
+console.log(`the sum of all multiples is ${total}`)
