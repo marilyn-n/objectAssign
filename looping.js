@@ -1,6 +1,9 @@
 const countries = [ 'Chile', 'Spain', 'Ingland', 'Argentina','Panama', 'USA', 'Mexico', 'Canada']
 const numbers = [5, 6, 12, 18, 20, 28, 32, 45, 51, 62, 64, 65, 67, 68, 72, 78, 83, 84, 91, 97]
 
+const mixedArray = countries.concat(numbers)
+console.log(mixedArray, 'mixed array with concat')
+
 for (let index = 0; index < countries.length; index++) {
   const element = countries[index]
 }
