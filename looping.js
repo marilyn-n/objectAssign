@@ -40,24 +40,44 @@ for (const item of countries) {
   const toUpperCase = item.toLocaleUpperCase()
   console.log(toUpperCase)
 }
+
 // enumerable
-for (const key in object) {
-  if (object.hasOwnProperty(key)) {
-    const element = object[key];
-    
+for (const element in countries) {
+  if (countries.hasOwnProperty(element)) {
+    console.log(countries[element], '******')
   }
 }
 
-while (condition) {
+for (const num in numbers) {
+  if (num % 2 === 0) {
+    console.log(numbers[num], '-------´´´´´+++')
+  }
+}
 
+for (const item in countries) {
+  const myItem = countries[item].toLocaleUpperCase()
+  console.log(myItem, '¡¡¡¡¡')
+}
+
+for (const num in numbers) {
+  if (numbers[num] > 50) {
+    console.log(numbers[num], 'ºººººº')
+  }
+}
+
+while (countries.length) {
+  console.log(countries, 'what')
+  break;
 }
 
 do {
-  
-} while (condition);
+  console.log(countries, 'mmmm')
+  break;
+
+} while (countries.length)
 
 
-array.forEach(element => {
-  
+numbers.forEach(num => {
+  console.log(num, 'hey')
 });
 
