@@ -1,8 +1,30 @@
-const countries = [ 'Chile', 'Spain', 'Ingland', 'Argentina','Panama', 'USA', 'Mexico', 'Canada']
+const countries = [ 'Chile', 'Spain', 'England', 'Argentina','Panama', 'USA', 'Mexico', 'Canada']
 const numbers = [5, 6, 12, 18, 20, 28, 32, 45, 51, 62, 64, 65, 67, 68, 72, 78, 83, 84, 91, 97]
 
 const mixedArray = countries.concat(numbers)
 console.log(mixedArray, 'mixed array with concat')
+
+const fizzBuzz = number => {
+  if(number % 2 === 0 && number % 5 === 0) {
+    return ('Fizz')
+  } else if (number % 5 === 0) {
+      return ('Buzz') 
+  } else if (number % 2 === 0 ) {
+    return ('FizzBuzz')
+  } else {
+    return (number)
+  }
+}
+
+const fizzBuzzLoop = array => {
+  for(let i = 0; i < array.length; i++) {
+    const number = array[i]
+    console.log(fizzBuzz(number))
+  }
+}
+
+fizzBuzzLoop(numbers)
+
 
 for (let index = 0; index < countries.length; index++) {
   const element = countries[index]
@@ -36,7 +58,7 @@ for (const num of numbers) {
 }
 
 for (const item of countries) {
-  console.log(item.length < 3) // ============================> what?
+  console.log(item.length < 3)
 }
 
 for (const item of countries) {
@@ -83,4 +105,5 @@ do {
 numbers.forEach(num => {
   console.log(num, 'hey')
 });
+
 
