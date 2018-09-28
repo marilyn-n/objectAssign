@@ -92,7 +92,7 @@ for (const num in numbers) {
 
 while (countries.length) {
   console.log(countries, 'what')
-  break;
+  break
 }
 
 do {
