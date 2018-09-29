@@ -4,9 +4,7 @@ you can clone or ovewrite
 
 The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.
 
-```
-example.js
-
+```js
 const myPersonalInfo = {
   name: 'Alisha',
   gender: 'F',
@@ -32,7 +30,6 @@ example.js
 
 Properties in the target object will be overwritten by properties in the sources if they have the same key.
 
-```
-example.js
+```js
 
 ```
