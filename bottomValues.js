@@ -58,15 +58,18 @@ console.log(canSheEat2(!'panda stew', '<<<<<<'))
 //  be between 1 and 20, make the program output "That's not between 1 and 20!" 
 //  if the user guesses less than 1 or greater than 20.
 
-const randomNumber = Math.floor(Math.random() * 10)
-console.log(randomNumber, 'random number')
+const randomNumber = Math.floor(Math.random() * 21)
+console.log(`The random number is ${randomNumber}`)
 
-const numberGuessing = (num) => {
+const userGuessNumber = (num) => {
+  console.log(`Your guess number is ${num}`)
   if (num === randomNumber) {
     return ('Yei you guess it right')
-  } else {
+  } else if (num < 1 || num > 20) {
     return ('That is not between 1 and 20!')
+  } else if (num != randomNumber) {
+    return ('Try again')
   }
 } 
 
-console.log(numberGuessing(0))
+console.log(userGuessNumber(20))
