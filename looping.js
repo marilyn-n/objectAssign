@@ -127,6 +127,9 @@ numbers.forEach(num => {
     console.log('*******************************')
   }
 
+  // Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 
+  // (100 results total).
+
   for(let i = 0; i < 11; i++) {
     console.log('*******************************')
     for(let a = 0; a < 11; a++) {
@@ -134,9 +137,36 @@ numbers.forEach(num => {
     }
   }
 
-  // Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 
-  // (100 results total).
+// Write a function named assignGrade that:
+// takes 1 argument, a number score.
+// returns a grade for the score, either "A", "B", "C", "D", or "F".
+// Call that function for a few different scores and log the result to make sure it works.
+
+const assignGrade = (score) => {
+  if(score <= 40) {
+    return ('F')
+  } else if(score >= 41 && score <= 60) {
+    return ('D')
+  } else if(score >= 61 && score <= 80) {
+    return ('C')
+  } else if(score >= 81 && score <= 90){
+    return ('B')
+  } else if(score >= 90) {
+    return ('A Congratulations!')
+  }
+}
+
+console.log(assignGrade(55))
+console.log(assignGrade(7))
+console.log(assignGrade(97))
+console.log(assignGrade(66))
+console.log(assignGrade(81))
 
 
+// Check the results of your assignGrade function from the conditionals exercise by logging every value 
+// from 60 to 100: your log should show "For 88, you got a B. For 89, you got a B. For 90, you got an A. 
+// For 91, you got an A.", etc., logging each grade point in the range.
 
-
+for (let i = 60; i <= 100; i++) {
+  console.log(`For ${[i]}, you got ${assignGrade([i])}`)
+}
