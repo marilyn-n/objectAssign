@@ -57,3 +57,16 @@ console.log(canSheEat2(!'panda stew', '<<<<<<'))
 //  Since the rules of the game say that the user has to guess a winning number which will 
 //  be between 1 and 20, make the program output "That's not between 1 and 20!" 
 //  if the user guesses less than 1 or greater than 20.
+
+const randomNumber = Math.floor(Math.random() * 10)
+console.log(randomNumber, 'random number')
+
+const numberGuessing = (num) => {
+  if (num === randomNumber) {
+    return ('Yei you guess it right')
+  } else {
+    return ('That is not between 1 and 20!')
+  }
+} 
+
+console.log(numberGuessing(0))
